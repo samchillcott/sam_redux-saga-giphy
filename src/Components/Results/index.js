@@ -3,12 +3,22 @@ import { connect } from 'react-redux';
 
 const Results = (props) => {
     console.log(props);
-    return (
-        <div>
-            
-        </div>
-    )
+    if (props.searchResults){
+        return (
+            <div>
+                { renderSearchResults(props.searchResults) }
+            </div>
+        )
+    }
+    return null
 }
+
+const renderSearchResults = (searchResults) => {
+    searchResults.map(result => {
+        return <div>{console.log(result.toJS())}</div>
+    })
+}
+
 
 const mapStateToProps = (state) => {
     return {
