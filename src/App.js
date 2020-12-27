@@ -5,9 +5,9 @@ import store from './Store/createStore';
 function App() {
   return (
     <Provider store={store} >
-    <div>
-      <Search /> 
-    </div>
+      <div>
+        <Search /> 
+      </div>
     </Provider >
   );
 }
