@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Spring } from 'react-spring/renderprops'
 
 const Result = ({ result }) => {
-    console.log(result.toJS().images.original.url);
     return (
         <>
-            <img src={result.toJS().images.original.url} alt="" />
+            <Spring
+                from={{ opacity: 0}}
+                to={{opacity: 1}}>
+                {springProps => <div style={ springProps }>
+                    <img src={result.toJS().images.original.url} alt="" />
+                </div>}
+            </Spring>
         </>
     )
 }
