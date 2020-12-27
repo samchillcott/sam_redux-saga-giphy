@@ -1,4 +1,4 @@
-import types from '../Search/types';
+import { types } from '../Search/types';
 import { takeLatest, put, call } from 'redux-saga/effects';
 import axios from 'axios';
 

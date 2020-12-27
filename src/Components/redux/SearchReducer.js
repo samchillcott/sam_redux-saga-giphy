@@ -1,5 +1,5 @@
 import { Map, fromJS } from 'immutable';
-import types from '../Search/types';
+import { types } from '../Search/types';
 
 const initialState = Map({
     searchResults: []
