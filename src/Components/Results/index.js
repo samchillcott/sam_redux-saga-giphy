@@ -7,7 +7,6 @@ const Results = (props) => {
     if (props.searchResults){
         return (
             <div>
-                Results component
                 { renderSearchResults(props.searchResults) }
             </div>
         )
@@ -16,7 +15,6 @@ const Results = (props) => {
 }
 
 const renderSearchResults = (searchResults) => {
-    console.log("renderSearchResults fired");
     return searchResults.map(result => {
         return <Result result={result} />
     })
