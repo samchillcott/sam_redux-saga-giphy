@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Result from './Result';
 
 const Results = (props) => {
     console.log(props);
     if (props.searchResults){
         return (
             <div>
+                Results component
                 { renderSearchResults(props.searchResults) }
             </div>
         )
@@ -14,8 +16,9 @@ const Results = (props) => {
 }
 
 const renderSearchResults = (searchResults) => {
-    searchResults.map(result => {
-        return <div>{console.log(result.toJS())}</div>
+    console.log("renderSearchResults fired");
+    return searchResults.map(result => {
+        return <Result result={result} />
     })
 }
 
