@@ -12,6 +12,7 @@ const Search = (props) => {
 
 async function onInputChange(e, props) {
     if (e.target.value.trim() !== "") {
+        console.log(e.target.value);
         props.getSearchResults(e.target.value);       
     }
 };

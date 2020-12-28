@@ -20,7 +20,6 @@ const renderSearchResults = (searchResults) => {
     })
 }
 
-
 const mapStateToProps = (state) => {
     return {
         searchResults: state.search.get('searchResults')
